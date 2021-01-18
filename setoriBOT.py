@@ -93,8 +93,5 @@ async def on_message(message):
 
             print ("error")
 
-
-
-
-# Botの起動とDiscordサーバーへの接続
-client.run('NzMyMTc1ODYyNjUyMjA3MTg1.Xwwx6A.C88CWOQslC9uUXovFtx3tZ49gxY')
+＃ボットの非入力とDiscord名への複素
+クライアント。run（"")
