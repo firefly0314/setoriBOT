@@ -1,4 +1,4 @@
-# SET_list_BOT V_1.3
+# SET_list_BOT V_1.4
  
 使い方ガイド
 $in	予約を入れる
