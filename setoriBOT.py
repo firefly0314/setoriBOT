@@ -29,7 +29,7 @@ async def on_message(message):
     global num
     
     if message.content.startswith('$h'):
-        await message.channel.send('$in 予約をする\n$out 次の人に順番を回す\n$list 予約を確認する')
+        await message.channel.send('$をつけてから\nin 予約をする\nout 次の人に順番を回す\nlist 予約を確認する')
 
 
     #リストに追加
@@ -58,43 +58,63 @@ async def on_message(message):
 
     #リスト出力
     if message.content.startswith('$list'):
+            
+        global sa
+        global sb
+        global sc
+        global sd
+        global se
+        global sf
+        global snam
+        
+        sa=" "
+        sb=" "
+        sc=" "
+        sd=" "
+        se=" "
+        sf=" "
+        snam=0
 
         if num > 0:
-            s="now-" +list[0]
 
-            print (s)
-            await message.channel.send(s)
+            sa="now -[ " +list[0]+"]"
+            snam=1
+
         if num > 1:
-            s="1      -" +list[1]
-            print (s)
-            await message.channel.send(s)
+
+            sb="1       -[ " +list[1]+"]"
+            snam=1
 
         if num > 2:
-            s="2      -" +list[2]
-            print (s)
-            await message.channel.send(s)
+
+            sc="2       -[ " +list[2]+"]"
+            snam=1
 
         if num > 3:
-            s="3      -" +list[3]
-            print (s)
-            await message.channel.send(s)
+
+            sd="3       -[ " +list[3]+"]"
+            snam=1
 
         if num > 4:
-            s="4      -" +list[4]
-            print (s)
-            await message.channel.send(s)
+
+            se="4       -[ " +list[4]+"]"
+            snam=1
 
         if num > 5:
-            s="5      -" +list[5]
-            print (s)
+
+            sf="5       -[ " +list[5]+"]"
+            snam=1
+
+        if snam == 1:
+
+            s = sa + "\n" + sb + "\n"  +sc + "\n"  + sd + "\n"  + se + "\n"  + sf
             await message.channel.send(s)
+            print ("Export") 
 
         else:
-
-            print ("no_date")
-
-
-
+                print ("no_date")
+                snam=0
+                await message.channel.send('誰もいないのでリストが作成できないにゃ！')
 
 # Botの起動とDiscordサーバーへの接続
-client.run('')
+client.run('NzMyMTc1ODYyNjUyMjA3MTg1.Xwwx6A.t448MaWmbFVV7HVY0jUoAuSBzmg')
