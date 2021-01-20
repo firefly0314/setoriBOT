@@ -2,7 +2,7 @@
 
 # インストールした discord.py を読み込む
 import discord
-
+import unicodedata
 
 # 接続に必要なオブジェクトを生成
 
@@ -34,13 +34,13 @@ async def on_message(message):
 
     #リストに追加
     if message.content.startswith('$in'):
-        await message.channel.send('OKにゃ')
+        await message.channel.send('オルガ'+message.author.name)
 
         temp  = message.author.name
-        temp2 = temp.encode('utf-8')
 
-        list.append(temp2) 
-        print (list)
+        list.append(temp) 
+        ##print (list)
+        print (temp)
         num+=1
 
 
@@ -60,32 +60,32 @@ async def on_message(message):
     if message.content.startswith('$list'):
 
         if num > 0:
-            s="now-".encode('utf-8')+list[0]
+            s="now-" +list[0]
+
             print (s)
             await message.channel.send(s)
-
         if num > 1:
-            s="   1   -".encode('utf-8')+list[1]
+            s="1      -" +list[1]
             print (s)
             await message.channel.send(s)
 
         if num > 2:
-            s="   2   -".encode('utf-8')+list[2]
+            s="2      -" +list[2]
             print (s)
             await message.channel.send(s)
 
         if num > 3:
-            s="   3   -".encode('utf-8')+list[3]
+            s="3      -" +list[3]
             print (s)
             await message.channel.send(s)
 
         if num > 4:
-            s="   4   -".encode('utf-8')+list[4]
+            s="4      -" +list[4]
             print (s)
             await message.channel.send(s)
 
         if num > 5:
-            s="   5   -".encode('utf-8')+list[5]
+            s="5      -" +list[5]
             print (s)
             await message.channel.send(s)
 
@@ -93,5 +93,8 @@ async def on_message(message):
 
             print ("error")
 
-＃ボットの非入力とDiscord名への複素
-クライアント。run（"")
+
+
+
+# Botの起動とDiscordサーバーへの接続
+client.run('NzMyMTc1ODYyNjUyMjA3MTg1.Xwwx6A.YYnJg36MasFbyCA2f20_cB6xzaQ')
