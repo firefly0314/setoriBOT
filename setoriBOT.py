@@ -28,8 +28,8 @@ async def on_message(message):
     global list
     global num
     
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith('$h'):
+        await message.channel.send('$in 予約をする\n$out 次の人に順番を回す\n$list 予約を確認する')
 
 
     #リストに追加
