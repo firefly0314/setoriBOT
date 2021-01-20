@@ -117,4 +117,4 @@ async def on_message(message):
                 await message.channel.send('誰もいないのでリストが作成できないにゃ！')
 
 # Botの起動とDiscordサーバーへの接続
-client.run('NzMyMTc1ODYyNjUyMjA3MTg1.Xwwx6A.t448MaWmbFVV7HVY0jUoAuSBzmg')
+client.run('')
