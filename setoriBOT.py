@@ -97,4 +97,4 @@ async def on_message(message):
 
 
 # Botの起動とDiscordサーバーへの接続
-client.run('NzMyMTc1ODYyNjUyMjA3MTg1.Xwwx6A.YYnJg36MasFbyCA2f20_cB6xzaQ')
+client.run('')
