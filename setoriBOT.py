@@ -34,13 +34,13 @@ async def on_message(message):
 
     #リストに追加
     if message.content.startswith('$in'):
-        await message.channel.send('オルガ'+message.author.name)
+        await message.channel.send('okにゃ！['+message.author.name+"]")
 
         temp  = message.author.name
 
         list.append(temp) 
-        ##print (list)
-        print (temp)
+        print (list)
+        ##print (temp)
         num+=1
 
 
@@ -91,7 +91,7 @@ async def on_message(message):
 
         else:
 
-            print ("error")
+            print ("no_date")
 
 
 
