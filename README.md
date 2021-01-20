@@ -1,13 +1,13 @@
-# SET_list_BOT
+# SET_list_BOT V_1.2
  
-g‚¢•ûƒKƒCƒh
-$in	—\–ñ‚ğ“ü‚ê‚é
-$out	Ÿ‚Ìl‚É‡”Ô‚ğ‰ñ‚·
-$list	—\–ñ‚ğŠm”F‚·‚é
+ä½¿ã„æ–¹ã‚¬ã‚¤ãƒ‰
+$in	äºˆç´„ã‚’å…¥ã‚Œã‚‹
+$out	æ¬¡ã®äººã«é †ç•ªã‚’å›ã™
+$list	äºˆç´„ã‚’ç¢ºèªã™ã‚‹
 
-d—l
-Œ¾Œê@Python@3.7
+ä»•æ§˜
+è¨€èªã€€Pythonã€€3.7
 Library
 discord.py
-
+import unicodedata
 
