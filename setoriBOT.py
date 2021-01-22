@@ -29,12 +29,12 @@ async def on_message(message):
     global num
     
     if message.content.startswith('$h'):
-        await message.channel.send('$をつけてから\nin 予約をする\nout 次の人に順番を回す\nlist 予約を確認する')
+        await message.channel.send('$をつけてから\nin 予約をする\nout 次の人に順番を回す\nlist 予約を確認する\n以上でよろしいですかにゃ？')
 
 
     #リストに追加
     if message.content.startswith('$in'):
-        await message.channel.send('okにゃ！['+message.author.name+"]")
+        await message.channel.send('了解ですにゃ['+message.author.name+"]")
 
         temp  = message.author.name
 
@@ -50,10 +50,10 @@ async def on_message(message):
             list.pop(0) 
             print (list)
             num-=1
-            await message.channel.send('OK、お疲れ様にゃ')
+            await message.channel.send('OK、お疲れ様...にゃ...')
 
         else:
-            await message.channel.send('誰もいないにゃ！')
+            await message.channel.send('誰もいないのに何を言ってるにゃ...')
 
 
     #リスト出力
@@ -114,7 +114,14 @@ async def on_message(message):
         else:
                 print ("no_date")
                 snam=0
-                await message.channel.send('誰もいないのでリストが作成できないにゃ！')
+                await message.channel.send('誰もいないのでリストが作成できないですにゃ...')
+
+    if message.content.startswith('かわいい'):
+        await message.channel.send('何を言ってるんですか？\nそんなこと無いですにゃ')
+    if message.content.startswith('オルガ'):
+        await message.channel.send('止まるんじゃねぇぞ…　\n　\n　\n 　n\n　 _H\n　巛 ｸ　 ノﾚzz\n　 F｜　幺 ﾐwｯﾐ\n　｜｜　ヽﾚvvｲ\n　｜ ￣⌒＼二ヽ＿\n　 ￣￣Ｙ　ミ　 /|\n　　　 ｜　 |　｜|\n　　　 /　　|　｜|\n　　　/　　 |　 L|\n　　　＼＿_/|＿/(ヽ\n　　　 ｜　　 ｜/ぐ)\n　　　 ｜　 ﾊ ∧＼≫\n　　　 ｜　/ Ｖ∧\n　　　 ｜ ｜　Ｖ｜')
+    if message.content.startswith('カカポ'):
+        await message.channel.send('https://forest.watch.impress.co.jp/img/wf/docs/1251/932/60fpsparrot.gif')
 
 # Botの起動とDiscordサーバーへの接続
-client.run('')
+client.run('NzMyMTc1ODYyNjUyMjA3MTg1.Xwwx6A.PWRggpDaE4kMJrv_tMWV2jqRgsM')
