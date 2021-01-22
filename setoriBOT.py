@@ -124,4 +124,4 @@ async def on_message(message):
         await message.channel.send('https://forest.watch.impress.co.jp/img/wf/docs/1251/932/60fpsparrot.gif')
 
 # Botの起動とDiscordサーバーへの接続
-client.run('NzMyMTc1ODYyNjUyMjA3MTg1.Xwwx6A.PWRggpDaE4kMJrv_tMWV2jqRgsM')
+client.run('')
