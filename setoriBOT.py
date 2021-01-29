@@ -59,22 +59,15 @@ async def on_message(message):
     #リスト出力
     if message.content.startswith('$list'):
             
-        global sa
-        global sb
-        global sc
-        global sd
-        global se
-        global sf
+        global string_list
         global snam
         
-        sa=" "
-        sb=" "
-        sc=" "
-        sd=" "
-        se=" "
-        sf=" "
+        string_list=[" " for i in range(0,6)]
         snam=0
-
+        for i in range(0,min(num,6)):
+                snam=1
+                string_list[i]="now -[ " +list[i]+"]"
+        """
         if num > 0:
 
             sa="now -[ " +list[0]+"]"
@@ -104,10 +97,10 @@ async def on_message(message):
 
             sf="5       -[ " +list[5]+"]"
             snam=1
-
+        """
         if snam == 1:
 
-            s = sa + "\n" + sb + "\n"  +sc + "\n"  + sd + "\n"  + se + "\n"  + sf
+            s = "\n".join(string_list)
             await message.channel.send(s)
             print ("Export") 
 
