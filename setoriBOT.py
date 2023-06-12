@@ -33,7 +33,7 @@ async def on_message(message):
 
 
     #リストに追加
-    if message.content.startswith('$in'):
+    elif message.content.startswith('$in'):
         await message.channel.send('了解ですにゃ['+message.author.name+"]")
 
         temp  = message.author.name
@@ -45,7 +45,7 @@ async def on_message(message):
 
 
     #リストから削除
-    if message.content.startswith('$out'):       
+    elif message.content.startswith('$out'):       
         if num > 0:
             list.pop(0) 
             print (list)
@@ -57,24 +57,17 @@ async def on_message(message):
 
 
     #リスト出力
-    if message.content.startswith('$list'):
+    elif message.content.startswith('$list'):
             
-        global sa
-        global sb
-        global sc
-        global sd
-        global se
-        global sf
+        global string_list
         global snam
         
-        sa=" "
-        sb=" "
-        sc=" "
-        sd=" "
-        se=" "
-        sf=" "
+        string_list=[" " for i in range(0,6)]
         snam=0
-
+        for i in range(0,min(num,6)):
+                snam=1
+                string_list[i]="now -[ " +list[i]+"]"
+        """
         if num > 0:
 
             sa="now -[ " +list[0]+"]"
@@ -104,10 +97,10 @@ async def on_message(message):
 
             sf="5       -[ " +list[5]+"]"
             snam=1
-
+        """
         if snam == 1:
 
-            s = sa + "\n" + sb + "\n"  +sc + "\n"  + sd + "\n"  + se + "\n"  + sf
+            s = "\n".join(string_list)
             await message.channel.send(s)
             print ("Export") 
 
@@ -116,11 +109,11 @@ async def on_message(message):
                 snam=0
                 await message.channel.send('誰もいないのでリストが作成できないですにゃ...')
 
-    if message.content.startswith('かわいい'):
+    elif message.content.startswith('かわいい'):
         await message.channel.send('何を言ってるんですか？\nそんなこと無いですにゃ')
-    if message.content.startswith('オルガ'):
+    elif message.content.startswith('オルガ'):
         await message.channel.send('止まるんじゃねぇぞ…　\n　\n　\n 　n\n　 _H\n　巛 ｸ　 ノﾚzz\n　 F｜　幺 ﾐwｯﾐ\n　｜｜　ヽﾚvvｲ\n　｜ ￣⌒＼二ヽ＿\n　 ￣￣Ｙ　ミ　 /|\n　　　 ｜　 |　｜|\n　　　 /　　|　｜|\n　　　/　　 |　 L|\n　　　＼＿_/|＿/(ヽ\n　　　 ｜　　 ｜/ぐ)\n　　　 ｜　 ﾊ ∧＼≫\n　　　 ｜　/ Ｖ∧\n　　　 ｜ ｜　Ｖ｜')
-    if message.content.startswith('カカポ'):
+    elif message.content.startswith('カカポ'):
         await message.channel.send('https://forest.watch.impress.co.jp/img/wf/docs/1251/932/60fpsparrot.gif')
 
 # Botの起動とDiscordサーバーへの接続
